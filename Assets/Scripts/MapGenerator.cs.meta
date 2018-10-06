@@ -1,0 +1,20 @@
+fileFormatVersion: 2
+guid: 9ef97ea9ac826a64b9ce00ff02d3a232
+timeCreated: 1538501998
+licenseType: Free
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - cubePrefab: {fileID: 4204630460557468, guid: 7f73ed7d03da4b5469cacdb4619fab29,
+      type: 2}
+  - iceSprite: {fileID: 21300000, guid: d40c191aa46654db7a426d6a1fa3aa30, type: 3}
+  - groundSprite: {fileID: 21300044, guid: f45a39483cf4f914a816af821c9262bb, type: 3}
+  - grassSprite: {fileID: 21300030, guid: 8fb98a6035269e64a998f9b56828fc4f, type: 3}
+  - sandSprite: {fileID: 21300022, guid: fc67a9002ed4034419f91d0d85bd6b24, type: 3}
+  - Object: {fileID: 23762725357826754, guid: 7f73ed7d03da4b5469cacdb4619fab29, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
