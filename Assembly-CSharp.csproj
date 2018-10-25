@@ -69,6 +69,13 @@
     <Compile Include="Assets\BlackWhiteStarterKit\Scripts\MusicManager.cs" />
     <Compile Include="Assets\BlackWhiteStarterKit\Scripts\RandomPosition.cs" />
     <Compile Include="Assets\BlackWhiteStarterKit\Scripts\Spawner.cs" />
+    <Compile Include="Assets\NavMesh-Tutorial-master\NavMesh Example Project\Assets\Example02 - Obstacles\ObstacleAnimation.cs" />
+    <Compile Include="Assets\NavMesh-Tutorial-master\NavMesh Example Project\Assets\Example03 - Runtime\LevelGenerator.cs" />
+    <Compile Include="Assets\NavMesh-Tutorial-master\NavMesh Example Project\Assets\Example05 - LowMan\LowMan\Scripts\ThirdPersonCharacter.cs" />
+    <Compile Include="Assets\NavMesh-Tutorial-master\NavMesh Example Project\Assets\NavMeshComponents\Scripts\NavMeshLink.cs" />
+    <Compile Include="Assets\NavMesh-Tutorial-master\NavMesh Example Project\Assets\NavMeshComponents\Scripts\NavMeshModifier.cs" />
+    <Compile Include="Assets\NavMesh-Tutorial-master\NavMesh Example Project\Assets\NavMeshComponents\Scripts\NavMeshModifierVolume.cs" />
+    <Compile Include="Assets\NavMesh-Tutorial-master\NavMesh Example Project\Assets\NavMeshComponents\Scripts\NavMeshSurface.cs" />
     <Compile Include="Assets\SampleScenes\Menu\Scripts\MenuSceneLoader.cs" />
     <Compile Include="Assets\SampleScenes\Menu\Scripts\PauseMenu.cs" />
     <Compile Include="Assets\SampleScenes\Menu\Scripts\SceneAndURLLoader.cs" />
@@ -77,10 +84,13 @@
     <Compile Include="Assets\SampleScenes\Scripts\ParticleSceneControls.cs" />
     <Compile Include="Assets\SampleScenes\Scripts\PlaceTargetWithMouse.cs" />
     <Compile Include="Assets\SampleScenes\Scripts\SlowMoButton.cs" />
+    <Compile Include="Assets\Scripts\alySpawner.cs" />
     <Compile Include="Assets\Scripts\buildingGenerator.cs" />
     <Compile Include="Assets\Scripts\cameraRotion.cs" />
+    <Compile Include="Assets\Scripts\characterSpawner.cs" />
     <Compile Include="Assets\Scripts\MapGenerator.cs" />
     <Compile Include="Assets\Scripts\mouseManager.cs" />
+    <None Include="Assets\NavMesh-Tutorial-master\NavMesh Example Project\ProjectSettings\ProjectVersion.txt" />
     <None Include="Assets\SampleScenes\Shaders\Skybox-Procedural.shader" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>D:/Projects/Unity Projects/AleatoryGenerationPrototipe/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
