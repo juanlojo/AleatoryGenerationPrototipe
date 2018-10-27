@@ -6,9 +6,6 @@ using UnityEngine.EventSystems;
 
 public class mouseManager : MonoBehaviour {
 
-    public bool actualTile = false;
-    public bool selectableTile = false;
-    public bool targetTile = false;
     public bool selectInfoTile = false;
     public GameObject infoUI;
 

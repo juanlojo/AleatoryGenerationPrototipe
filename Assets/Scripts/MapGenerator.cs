@@ -6,13 +6,49 @@ using UnityEngine.AI;
 
 public class MapGenerator : MonoBehaviour {
 
-    public GameObject cubePrefab;
-    public Vector2 mapSize;
-    private GameObject navMeshPrefabHolder;
+    public TileClass[] tileTypes;
+    int[,] tiles;
+
+    //public GameObject cubePrefab;
+    public int mapSizeX;
+    public int mapSizeY;
+
+    public NavMeshSurface navMeshSurface;
 
 	// Use this for initialization
 	void Start () {
-        MapGeneration();
+        //MapGeneration();
+        int randomizer = Random.Range(0, 100);
+
+        tiles = new int[mapSizeX, mapSizeY];
+
+        for(int x = 0; x < mapSizeX; x++)
+        {
+            for(int y = 0; y < mapSizeY; y++)
+            {
+                if(randomizer % 20 == 0)
+                {
+                    tiles[x, y] = 0;
+                }
+                else if(randomizer % 30 == 0)
+                {
+                    tiles[x, y] = 1;
+                }
+                else if(randomizer % 40 == 0)
+                {
+                    tiles[x, y] = 2;
+                }
+                else
+                {
+                    tiles[x, y] = 3;
+                }
+            }
+        }
+        GenerateMap();
+
+
+        //UPDATE DYNAMIC NAVMESH
+        navMeshSurface.BuildNavMesh();
     }
 	
 	// Update is called once per frame
@@ -20,26 +56,30 @@ public class MapGenerator : MonoBehaviour {
 
     }
 
-    public void MapGeneration()
+    //public void MapGeneration()
+    //{
+    //    for (int x = 0; x < mapSize.x; x++)
+    //    {
+    //        for (int y = 0; y < mapSize.y; y++)
+    //        {
+    //            GameObject cube = Instantiate(cubePrefab, new Vector3(-mapSize.x / 2 + 0.5f + x, 0, -mapSize.y / 2 + 0.5f + y), Quaternion.identity); //instancia los cubos.
+    //            cube.name = "Cube_" + x + y; //pone un nombre a las instancias del cubo, en función de su posicion en los ejes. De esta forma podemos diferenciarlos con mayor facilidad.
+    //            cube.transform.SetParent(this.transform); //ordena todas los clones del cubo dentro del mapa en la jerarquía
+    //        }
+    //    }
+    //}
+
+    public void GenerateMap()
     {
-        navMeshPrefabHolder = Instantiate(new GameObject("navMeshPrefabHolder"), new Vector3(0,0,0), Quaternion.identity);
-        for (int x = 0; x < mapSize.x; x++)
+        for (int x = 0; x < mapSizeX; x++)
         {
-            for (int y = 0; y < mapSize.y; y++)
+            for (int y = 0; y < mapSizeY; y++)
             {
-                GameObject cube = Instantiate(cubePrefab, new Vector3(-mapSize.x / 2 + 0.5f + x, 0, -mapSize.y / 2 + 0.5f + y), Quaternion.identity); //instancia los cubos.
-                cube.transform.parent = navMeshPrefabHolder.transform;
-                cube.name = "Cube_" + x + y; //pone un nombre a las instancias del cubo, en función de su posicion en los ejes. De esta forma podemos diferenciarlos con mayor facilidad.
-                cube.transform.SetParent(this.transform); //ordena todas los clones del cubo dentro del mapa en la jerarquía
+                TileClass tile = tileTypes[tiles[x, y]];
+                GameObject cube = Instantiate(tile.cubePrefab, new Vector3(-mapSizeX / 2 + 0.5f + x, 0, -mapSizeY / 2 + 0.5f + y), Quaternion.identity);
+                cube.name = "Cube_" + x + y;
+                cube.transform.SetParent(this.transform);
             }
         }
-        navMeshPrefabHolder.AddComponent<NavMeshSurface>();
-        navMeshPrefabHolder.GetComponent<NavMeshSurface>().collectObjects = CollectObjects.Children;
-        GenerateNavMesh();
-    }
-
-    public void GenerateNavMesh()
-    {
-        navMeshPrefabHolder.GetComponent<NavMeshSurface>().BuildNavMesh();
     }
 }
