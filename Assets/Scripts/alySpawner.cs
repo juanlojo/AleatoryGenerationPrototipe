@@ -9,6 +9,9 @@ public class alySpawner : MonoBehaviour {
     public GameObject unit1;
     public GameObject unit2;
 
+    public GameObject instUnit1;
+    public GameObject instUnit2;
+
     public Toggle toggle1;
     public Toggle toggle2;
 
@@ -33,7 +36,7 @@ public class alySpawner : MonoBehaviour {
                         if (Input.GetMouseButton(2))
                         {
                             Vector3 spawnLocation = hitInfo.collider.transform.position + hitInfo.normal + new Vector3(0, 0.5f, 0);
-                            Instantiate(unit1, spawnLocation, Quaternion.identity);
+                            instUnit1 = (GameObject)Instantiate(unit1, spawnLocation, Quaternion.identity);
                         }
                     }
                 }
@@ -55,7 +58,7 @@ public class alySpawner : MonoBehaviour {
                         if (Input.GetMouseButton(2))
                         {
                             Vector3 spawnLocation = hitInfo.collider.transform.position + hitInfo.normal + new Vector3(0, 0.5f, 0);
-                            Instantiate(unit2, spawnLocation, Quaternion.identity);
+                            instUnit2 = (GameObject)Instantiate(unit2, spawnLocation, Quaternion.identity);
                         }
                     }
                 }

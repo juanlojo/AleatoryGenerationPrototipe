@@ -87,11 +87,12 @@
     <Compile Include="Assets\Scripts\alySpawner.cs" />
     <Compile Include="Assets\Scripts\buildingGenerator.cs" />
     <Compile Include="Assets\Scripts\cameraRotion.cs" />
-    <Compile Include="Assets\Scripts\characterSpawner.cs" />
     <Compile Include="Assets\Scripts\MapGenerator.cs" />
     <Compile Include="Assets\Scripts\mouseManager.cs" />
-    <Compile Include="Assets\Scripts\PlayerMovement.cs" />
+    <Compile Include="Assets\Scripts\NodesClass.cs" />
     <Compile Include="Assets\Scripts\TileClass.cs" />
+    <Compile Include="Assets\Scripts\TileIsClickable.cs" />
+    <Compile Include="Assets\Scripts\UnitClass.cs" />
     <None Include="Assets\NavMesh-Tutorial-master\NavMesh Example Project\ProjectSettings\ProjectVersion.txt" />
     <None Include="Assets\SampleScenes\Shaders\Skybox-Procedural.shader" />
     <Reference Include="UnityEditor.StandardEvents">

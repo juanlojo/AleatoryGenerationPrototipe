@@ -18,7 +18,7 @@ public class buildingGenerator : MonoBehaviour {
 
     public void GenerateBuilds()
     {
-        Vector3 position = new Vector3(Random.Range(0,2), 1.5f, Random.Range(0,2));
+        Vector3 position = new Vector3(Random.Range(0,10), 0.5f, Random.Range(0,10));
         Instantiate(building, position, Quaternion.identity);
     }
 }
