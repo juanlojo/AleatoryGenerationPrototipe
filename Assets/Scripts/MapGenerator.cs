@@ -5,7 +5,8 @@ using UnityEngine.EventSystems;
 using UnityEngine.AI;
 using System.Linq;
 
-public class MapGenerator : MonoBehaviour {
+public class MapGenerator : MonoBehaviour
+{
     NodesClass[,] pathGraph;
 
     //Posición de los tiles y datos para su generación
@@ -17,7 +18,8 @@ public class MapGenerator : MonoBehaviour {
     public int mapSizeX;
     public int mapSizeY;
 
-	void Start () {
+    void Start()
+    {
         unitSelected.GetComponent<UnitClass>().tileX = (int)unitSelected.transform.position.x;
         unitSelected.GetComponent<UnitClass>().tileX = (int)unitSelected.transform.position.y;
         unitSelected.GetComponent<UnitClass>().map = this;
@@ -26,10 +28,11 @@ public class MapGenerator : MonoBehaviour {
         GeneratePathGraph();
         GenerateMap();
     }
-	
-	// Update is called once per frame
-	void Update () {
-       
+
+    // Update is called once per frame
+    void Update()
+    {
+
     }
 
     public void MapData()
@@ -42,7 +45,7 @@ public class MapGenerator : MonoBehaviour {
         {
             for (int y = 0; y < mapSizeY; y++)
             {
-                tiles[x, y] = 1;
+                tiles[x, y] = 0;
             }
         }
         //pequeño cuadrado amarillo para probar pathfinding
@@ -57,6 +60,16 @@ public class MapGenerator : MonoBehaviour {
         tiles[1, 7] = 3;
         tiles[2, 6] = 3;
         tiles[2, 7] = 3;
+
+        tiles[5, 1] = 3;
+        tiles[6, 1] = 3;
+        tiles[7, 1] = 3;
+        tiles[8, 1] = 3;
+        tiles[6, 2] = 3;
+        tiles[7, 2] = 3;
+        tiles[8, 2] = 3;
+        tiles[8, 3] = 3;
+        tiles[7, 3] = 3;
 
         tiles[7, 7] = 2;
         tiles[7, 8] = 2;
@@ -85,7 +98,7 @@ public class MapGenerator : MonoBehaviour {
 
     public Vector3 ConvertToWorldCoordinates(int x, int y)
     {
-        return new Vector3(x, 0, y);
+        return new Vector3(x, 0.5f, y);
     }
 
     public void GeneratePathGraph()
@@ -134,7 +147,7 @@ public class MapGenerator : MonoBehaviour {
     {
         TileClass tileClass = tileTypes[tiles[finalX, finalY]];
 
-        if(tileCanBeEntered(finalX, finalY) == false)
+        if (tileCanBeEntered(finalX, finalY) == false)
         {
             return Mathf.Infinity;
         }
@@ -152,7 +165,7 @@ public class MapGenerator : MonoBehaviour {
         //Borra el path viejo de la unidad.
         unitSelected.GetComponent<UnitClass>().actualPath = null;
 
-        if(tileCanBeEntered(x,y) == false)
+        if (tileCanBeEntered(x, y) == false)
         {
             return;
         }
@@ -203,7 +216,7 @@ public class MapGenerator : MonoBehaviour {
             foreach (NodesClass nodeZ in nodeU.sideCubes)
             {
                 //float distanceBtwn = distance[nodeU] + nodeU.DistanceTo(nodeZ);
-                float distanceBtwn = distance[nodeU] + TileCost(nodeU.x ,nodeU.y ,nodeZ.x, nodeZ.y);
+                float distanceBtwn = distance[nodeU] + TileCost(nodeU.x, nodeU.y, nodeZ.x, nodeZ.y);
                 if (distanceBtwn < distance[nodeZ])
                 {
                     distance[nodeZ] = distanceBtwn;

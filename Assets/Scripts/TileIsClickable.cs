@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TileIsClickable : MonoBehaviour {
+public class TileIsClickable : MonoBehaviour
+{
     public int posX;
     public int posY;
 

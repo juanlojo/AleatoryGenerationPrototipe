@@ -4,7 +4,8 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
-public class alySpawner : MonoBehaviour {
+public class alySpawner : MonoBehaviour
+{
 
     public GameObject unit1;
     public GameObject unit2;
@@ -14,11 +15,6 @@ public class alySpawner : MonoBehaviour {
 
     public Toggle toggle1;
     public Toggle toggle2;
-
-    //Combat system stats
-    //public float HP = 100;
-    //public float def = Random.Range(3, 6);
-    //public float atk = Random.Range(10, 13);
 
     void Update()
     {

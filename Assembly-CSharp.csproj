@@ -61,40 +61,21 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\BlackWhiteStarterKit\Scripts\AdManager.cs" />
-    <Compile Include="Assets\BlackWhiteStarterKit\Scripts\GameManager.cs" />
-    <Compile Include="Assets\BlackWhiteStarterKit\Scripts\JumpCube.cs" />
-    <Compile Include="Assets\BlackWhiteStarterKit\Scripts\MenuManager.cs" />
-    <Compile Include="Assets\BlackWhiteStarterKit\Scripts\MoveCubes.cs" />
-    <Compile Include="Assets\BlackWhiteStarterKit\Scripts\MusicManager.cs" />
-    <Compile Include="Assets\BlackWhiteStarterKit\Scripts\RandomPosition.cs" />
-    <Compile Include="Assets\BlackWhiteStarterKit\Scripts\Spawner.cs" />
-    <Compile Include="Assets\NavMesh-Tutorial-master\NavMesh Example Project\Assets\Example02 - Obstacles\ObstacleAnimation.cs" />
-    <Compile Include="Assets\NavMesh-Tutorial-master\NavMesh Example Project\Assets\Example03 - Runtime\LevelGenerator.cs" />
-    <Compile Include="Assets\NavMesh-Tutorial-master\NavMesh Example Project\Assets\Example05 - LowMan\LowMan\Scripts\ThirdPersonCharacter.cs" />
-    <Compile Include="Assets\NavMesh-Tutorial-master\NavMesh Example Project\Assets\NavMeshComponents\Scripts\NavMeshLink.cs" />
-    <Compile Include="Assets\NavMesh-Tutorial-master\NavMesh Example Project\Assets\NavMeshComponents\Scripts\NavMeshModifier.cs" />
-    <Compile Include="Assets\NavMesh-Tutorial-master\NavMesh Example Project\Assets\NavMeshComponents\Scripts\NavMeshModifierVolume.cs" />
-    <Compile Include="Assets\NavMesh-Tutorial-master\NavMesh Example Project\Assets\NavMeshComponents\Scripts\NavMeshSurface.cs" />
-    <Compile Include="Assets\SampleScenes\Menu\Scripts\MenuSceneLoader.cs" />
-    <Compile Include="Assets\SampleScenes\Menu\Scripts\PauseMenu.cs" />
-    <Compile Include="Assets\SampleScenes\Menu\Scripts\SceneAndURLLoader.cs" />
-    <Compile Include="Assets\SampleScenes\Scripts\CameraSwitch.cs" />
-    <Compile Include="Assets\SampleScenes\Scripts\LevelReset.cs" />
-    <Compile Include="Assets\SampleScenes\Scripts\ParticleSceneControls.cs" />
-    <Compile Include="Assets\SampleScenes\Scripts\PlaceTargetWithMouse.cs" />
-    <Compile Include="Assets\SampleScenes\Scripts\SlowMoButton.cs" />
+    <Compile Include="Assets\Scripts\AlyAttack.cs" />
     <Compile Include="Assets\Scripts\alySpawner.cs" />
-    <Compile Include="Assets\Scripts\buildingGenerator.cs" />
-    <Compile Include="Assets\Scripts\cameraRotion.cs" />
+    <Compile Include="Assets\Scripts\BulletClass.cs" />
+    <Compile Include="Assets\Scripts\CameraRotation.cs" />
+    <Compile Include="Assets\Scripts\CenterTurret.cs" />
+    <Compile Include="Assets\Scripts\EnemyAI.cs" />
+    <Compile Include="Assets\Scripts\EnemyClass.cs" />
+    <Compile Include="Assets\Scripts\EnemySpawner.cs" />
     <Compile Include="Assets\Scripts\MapGenerator.cs" />
-    <Compile Include="Assets\Scripts\mouseManager.cs" />
+    <Compile Include="Assets\Scripts\MouseManager.cs" />
     <Compile Include="Assets\Scripts\NodesClass.cs" />
-    <Compile Include="Assets\Scripts\TileClass.cs" />
+    <Compile Include="Assets\Scripts\PauseButton.cs" />
     <Compile Include="Assets\Scripts\TileIsClickable.cs" />
+    <Compile Include="Assets\Scripts\TilesClass.cs" />
     <Compile Include="Assets\Scripts\UnitClass.cs" />
-    <None Include="Assets\NavMesh-Tutorial-master\NavMesh Example Project\ProjectSettings\ProjectVersion.txt" />
-    <None Include="Assets\SampleScenes\Shaders\Skybox-Procedural.shader" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>D:/Projects/Unity Projects/AleatoryGenerationPrototipe/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>
@@ -338,12 +319,6 @@
     <Reference Include="Boo.Lang">
       <HintPath>C:/Program Files/Unity/Editor/Data/MonoBleedingEdge/lib/mono/unity/Boo.Lang.dll</HintPath>
     </Reference>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
-      <Project>{67C0D14B-65EF-6D0A-C583-D2947957DAA2}</Project>
-      <Name>Assembly-CSharp-firstpass</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
